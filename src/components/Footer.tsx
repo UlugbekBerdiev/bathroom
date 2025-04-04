@@ -1,35 +1,42 @@
-import { FaFacebook, FaInstagram, FaYelp } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaYelp, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
     <footer className="bg-gray-900 text-white py-12">
-      <div className="container">
+      <div className="container px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-xl font-bold mb-4">Beautiful Bathrooms</h3>
             <p className="text-gray-400">
               Professional bathroom remodeling services in the Greater Seattle Area.
             </p>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <p className="text-gray-400">
-              Phone: (123) 456-7890<br />
-              Hours: Mon-Fri 8am-6pm, Sat 9am-4pm
-            </p>
+            <div className="flex flex-col space-y-2">
+              <div className="flex items-center justify-center md:justify-start">
+                <FaPhoneAlt className="w-4 h-4 mr-2 text-gray-400" />
+                <span className="text-gray-400">(123) 456-7890</span>
+              </div>
+              <div className="flex items-center justify-center md:justify-start">
+                <FaMapMarkerAlt className="w-4 h-4 mr-2 text-gray-400" />
+                <span className="text-gray-400">Seattle Area</span>
+              </div>
+            </div>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center md:justify-start">
               <a
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Facebook"
               >
                 <FaFacebook className="w-6 h-6" />
               </a>
@@ -38,6 +45,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Instagram"
               >
                 <FaInstagram className="w-6 h-6" />
               </a>
@@ -46,6 +54,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Yelp"
               >
                 <FaYelp className="w-6 h-6" />
               </a>

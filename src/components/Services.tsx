@@ -25,10 +25,10 @@ const services = [
 
 export function Services() {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+    <section id="services" className="py-12 md:py-16 bg-gray-50">
+      <div className="container px-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
             Our Services
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -37,14 +37,16 @@ export function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              className="bg-white p-5 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center"
             >
-              <service.icon className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+              <div className="bg-primary/10 p-3 rounded-full mb-4">
+                <service.icon className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-lg md:text-xl font-semibold mb-2">{service.title}</h3>
               <p className="text-gray-600">{service.description}</p>
             </div>
           ))}
