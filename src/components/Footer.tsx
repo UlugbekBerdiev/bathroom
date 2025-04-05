@@ -8,21 +8,11 @@ export function Footer() {
       <div className="container px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
-            <h3 className="text-xl font-semibold mb-4">Beka Remodeling</h3>
-            <div className="mb-8 md:mb-0">
-              <div className="flex flex-col items-center md:items-start">
-                <div className="text-2xl font-bold mb-1">
-                  <span className="text-primary">Beka</span>
-                  <span className="text-white">Remodeling</span>
-                  <sup className="text-[10px] text-primary">®</sup>
-                </div>
-                <div className="text-sm text-slate-300 mb-4">Since 2008</div>
-              </div>
-              <p className="text-slate-300 mb-4">
-                Your trusted bathroom remodeling experts serving Washington DC, Maryland,
-                and Northern Virginia.
-              </p>
-            </div>
+            <h3 className="text-xl font-semibold mb-4">Premium Bathrooms</h3>
+            <p className="text-slate-300 mb-4">
+              Your trusted bathroom remodeling experts serving Washington DC, Maryland,
+              and Northern Virginia.
+            </p>
             <div className="flex space-x-4 items-center justify-center md:justify-start">
               <a
                 href="#"
@@ -95,7 +85,7 @@ export function Footer() {
       </div>
       <div className="bg-slate-900 py-4 text-center text-slate-400">
         <div className="container px-4">
-          <p>&copy; {currentYear} Beka Remodeling. All rights reserved.</p>
+          <p>&copy; {currentYear} Premium Bathrooms. All rights reserved.</p>
         </div>
       </div>
     </footer>
