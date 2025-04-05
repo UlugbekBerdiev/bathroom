@@ -1,0 +1,110 @@
+Project Overview
+
+We are developing a one-page React website for a bathroom remodeling business. The website will showcase services, completed projects, customer reviews, and include a contact section with a quote request form. The quote form will send an email to the business owner upon submission, eliminating the need for a backend.
+
+Technical Requirements
+
+Frontend
+
+Framework: React (Vite or Create React App)
+
+Styling: Tailwind CSS
+
+Form Handling: React Hook Form (optional for validation)
+
+Email Sending Service: EmailJS
+
+Icons: React Icons
+
+Hosting: Netlify or Vercel (for fast static deployment)
+
+Website Sections & Features
+
+1. Header
+
+Display business name/logo
+
+Smooth scrolling navigation: Home | Gallery | Reviews | Quote | Contact
+
+2. Hero Section
+
+Headline: "Beautiful Bathroom Remodeling You Can Trust"
+
+Subheadline and Call-to-Action ("Request a Free Quote")
+
+3. About / Services Section
+
+Short description of business and services offered
+
+Optional: Image of owner or team
+
+4. Gallery of Completed Projects
+
+Grid layout showcasing before/after images
+
+Each project includes location and short description
+
+5. Customer Reviews
+
+Display 3-5 testimonials with names and locations
+
+Optional: Star rating visuals
+
+6. Quote Request Form
+
+Fields: Name, Phone, Address, Problem Description
+
+Submit button triggers EmailJS service to send an email
+
+Success/Error messages on form submission
+
+7. Contact Section
+
+Click-to-call phone number
+
+Business email (non-clickable to prevent spam bots)
+
+Service area coverage
+
+8. Footer
+
+Business name, phone number, copyright info
+
+Links to social media (optional)
+
+EmailJS Integration Details
+
+Sign up at EmailJS
+
+Create an email template with placeholders
+
+Configure the React app:
+
+Install EmailJS: npm install @emailjs/browser
+
+Use emailjs.sendForm in the form submission handler
+
+Store Service ID, Template ID, and Public Key in .env file for security
+
+Deployment Plan
+
+Local Development
+
+Run npm install to set up dependencies
+
+Start development server with npm run dev
+
+Testing
+
+Check responsiveness across devices
+
+Test form submission with EmailJS
+
+Deployment
+
+Deploy to Netlify or Vercel for easy hosting
+
+Set up environment variables for EmailJS credentials
+
+Validate live email functionality
+

@@ -74,11 +74,11 @@ export function QuoteForm() {
   }
 
   return (
-    <section id="quote" className="py-16">
-      <div className="container">
+    <section id="quote" className="py-12 md:py-16 bg-gray-50">
+      <div className="container px-4">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
               Request a Free Quote
             </h2>
             <p className="text-gray-600">
@@ -89,7 +89,7 @@ export function QuoteForm() {
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="space-y-6 bg-white p-8 rounded-lg shadow-md"
+            className="space-y-5 bg-white p-6 md:p-8 rounded-lg shadow-md"
           >
             <div>
               <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
@@ -127,34 +127,44 @@ export function QuoteForm() {
               )}
             </div>
 
-            <div>
-              <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                {...register('phone', { required: 'Phone number is required' })}
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-              {errors.phone && (
-                <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
-              )}
-            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  maxLength={10}
+                  {...register('phone', { 
+                    required: 'Phone number is required',
+                    pattern: {
+                      value: /^\d{10}$/,
+                      message: 'Please enter a valid 10-digit phone number'
+                    }
+                  })}
+                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="1234567890"
+                />
+                {errors.phone && (
+                  <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
+                )}
+              </div>
 
-            <div>
-              <label htmlFor="address" className="block text-gray-700 font-medium mb-2">
-                Address
-              </label>
-              <input
-                type="text"
-                id="address"
-                {...register('address', { required: 'Address is required' })}
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-              {errors.address && (
-                <p className="text-red-500 text-sm mt-1">{errors.address.message}</p>
-              )}
+              <div>
+                <label htmlFor="address" className="block text-gray-700 font-medium mb-2">
+                  Address
+                </label>
+                <input
+                  type="text"
+                  id="address"
+                  {...register('address', { required: 'Address is required' })}
+                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+                {errors.address && (
+                  <p className="text-red-500 text-sm mt-1">{errors.address.message}</p>
+                )}
+              </div>
             </div>
 
             <div>
@@ -181,15 +191,18 @@ export function QuoteForm() {
             </button>
 
             {submitStatus === 'success' && (
-              <p className="text-green-600 text-center">
-                Thank you! We'll get back to you shortly.
-              </p>
+              <div className="bg-green-50 border border-green-200 text-green-700 px-8 py-6 rounded-lg text-center max-w-2xl mx-auto my-8">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">Thank You!</h3>
+                <p className="text-lg md:text-xl">
+                  Your quote request has been submitted successfully. We'll get back to you shortly.
+                </p>
+              </div>
             )}
 
             {submitStatus === 'error' && (
-              <p className="text-red-600 text-center">
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded text-center">
                 Something went wrong. Please try again or contact us directly.
-              </p>
+              </div>
             )}
           </form>
         </div>

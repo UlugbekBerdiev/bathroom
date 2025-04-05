@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './utilities.css';
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -9,6 +11,7 @@
   
   body {
     @apply bg-white text-gray-900;
+    overflow-x: hidden;
   }
 }
 
@@ -18,7 +21,7 @@
   }
   
   .btn {
-    @apply px-6 py-3 rounded-lg font-semibold transition-colors duration-200;
+    @apply px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center;
   }
   
   .btn-primary {
