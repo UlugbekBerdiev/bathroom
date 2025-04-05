@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll'
 import { useState, useEffect } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes, FaPhone } from 'react-icons/fa'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -46,8 +46,8 @@ export function Header() {
     >
       <div className="container">
         <nav className="flex items-center justify-between">
-          <div className="text-2xl md:text-3xl font-bold text-primary">
-            Bathroom Remodeling
+          <div className="text-2xl md:text-3xl font-bold text-primary text-center w-full md:w-auto md:text-left">
+            Premium Bathrooms
           </div>
           
           {/* Desktop Menu */}
@@ -66,16 +66,36 @@ export function Header() {
                 </Link>
               </li>
             ))}
+            
+            <li>
+              <a 
+                href="tel:+14435370266"
+                className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
+                aria-label="Call us"
+              >
+                <FaPhone size={18} />
+              </a>
+            </li>
           </ul>
           
           {/* Mobile Menu Button */}
-          <button 
-            className="block md:hidden text-gray-800 hover:text-primary focus:outline-none"
-            onClick={toggleMenu}
-            aria-label="Toggle mobile menu"
-          >
-            {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
+          <div className="flex items-center gap-4 md:hidden">
+            <a 
+              href="tel:+14435370266"
+              className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
+              aria-label="Call us"
+            >
+              <FaPhone size={18} />
+            </a>
+            
+            <button 
+              className="block text-gray-800 hover:text-primary focus:outline-none"
+              onClick={toggleMenu}
+              aria-label="Toggle mobile menu"
+            >
+              {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
         </nav>
       </div>
 
@@ -85,9 +105,9 @@ export function Header() {
           isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible h-0'
         }`}
       >
-        <ul className="container py-4 space-y-4">
+        <ul className="container py-4 space-y-4 text-center">
           {navItems.map((item) => (
-            <li key={item.to}>
+            <li key={item.to} className="flex justify-center">
               <Link
                 to={item.to}
                 spy={true}

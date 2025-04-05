@@ -1,27 +1,4 @@
-import { FaShower, FaSink, FaBath, FaTools } from 'react-icons/fa'
-
-const services = [
-  {
-    icon: FaShower,
-    title: 'Shower Remodeling',
-    description: 'Custom shower designs, tiling, and modern fixtures installation.',
-  },
-  {
-    icon: FaSink,
-    title: 'Vanity & Sink',
-    description: 'Stylish vanities, countertops, and efficient plumbing solutions.',
-  },
-  {
-    icon: FaBath,
-    title: 'Bathtub Installation',
-    description: 'Luxurious bathtub options with professional installation.',
-  },
-  {
-    icon: FaTools,
-    title: 'Full Remodeling',
-    description: 'Complete bathroom transformation from floor to ceiling.',
-  },
-]
+import { FaBath, FaShower, FaWrench } from 'react-icons/fa'
 
 export function Services() {
   return (
@@ -32,24 +9,50 @@ export function Services() {
             Our Services
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We offer comprehensive bathroom remodeling services with attention to detail
-            and quality craftsmanship that stands the test of time.
+            We offer comprehensive bathroom remodeling services to transform your
+            space into a beautiful and functional area you'll love.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="bg-white p-5 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center"
-            >
-              <div className="bg-primary/10 p-3 rounded-full mb-4">
-                <service.icon className="w-8 h-8 text-primary" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+          <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="flex justify-center items-center mb-4">
+              <div className="bg-primary/10 p-3 rounded-full flex items-center justify-center">
+                <FaBath className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
             </div>
-          ))}
+            <h3 className="text-xl font-semibold mb-2">Full Bathroom Remodeling</h3>
+            <p className="text-gray-600">
+              Complete bathroom transformations with design services, demolition,
+              installation, and finishing touches.
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="flex justify-center items-center mb-4">
+              <div className="bg-primary/10 p-3 rounded-full flex items-center justify-center">
+                <FaShower className="w-6 h-6 text-primary" />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Shower & Tub Conversion</h3>
+            <p className="text-gray-600">
+              Convert your tub to a shower or vice versa, with custom designs and
+              accessibility options available.
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="flex justify-center items-center mb-4">
+              <div className="bg-primary/10 p-3 rounded-full flex items-center justify-center">
+                <FaWrench className="w-6 h-6 text-primary" />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Bathroom Repairs & Updates</h3>
+            <p className="text-gray-600">
+              Fixture replacements, tile repair, vanity upgrades, and other smaller
+              updates to refresh your bathroom.
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -1,71 +1,91 @@
-import { FaFacebook, FaInstagram, FaYelp, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold mb-4">Beautiful Bathrooms</h3>
-            <p className="text-gray-400">
-              Professional bathroom remodeling services in the Greater Seattle Area.
+    <footer className="bg-slate-800 text-white">
+      <div className="container px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Premium Bathrooms</h3>
+            <p className="text-slate-300 mb-4">
+              Your trusted bathroom remodeling experts serving Washington DC, Maryland,
+              and Northern Virginia.
             </p>
-          </div>
-
-          <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <div className="flex flex-col space-y-2">
-              <div className="flex items-center justify-center md:justify-start">
-                <FaPhoneAlt className="w-4 h-4 mr-2 text-gray-400" />
-                <span className="text-gray-400">(123) 456-7890</span>
-              </div>
-              <div className="flex items-center justify-center md:justify-start">
-                <FaMapMarkerAlt className="w-4 h-4 mr-2 text-gray-400" />
-                <span className="text-gray-400">Seattle Area</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-            <div className="flex space-x-4 justify-center md:justify-start">
+            <div className="flex space-x-4 items-center justify-center md:justify-start">
               <a
                 href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-white hover:text-primary transition-colors"
                 aria-label="Facebook"
               >
-                <FaFacebook className="w-6 h-6" />
+                <FaFacebook size={20} />
               </a>
               <a
                 href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-white hover:text-primary transition-colors"
                 aria-label="Instagram"
               >
-                <FaInstagram className="w-6 h-6" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Yelp"
-              >
-                <FaYelp className="w-6 h-6" />
+                <FaInstagram size={20} />
               </a>
             </div>
           </div>
-        </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>
-            © {currentYear} Beautiful Bathrooms. All rights reserved.
-          </p>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center justify-center md:justify-start">
+                <FaPhone className="mr-2 text-primary" />
+                <a href="tel:+14435370266" className="hover:text-primary transition-colors">
+                  (443) 537-0266
+                </a>
+              </li>
+              <li className="flex items-center justify-center md:justify-start">
+                <FaEnvelope className="mr-2 text-primary" />
+                <a
+                  href="mailto:info@bathroomremodeling.com"
+                  className="hover:text-primary transition-colors"
+                >
+                  info@bathroomremodeling.com
+                </a>
+              </li>
+              <li className="flex items-center justify-center md:justify-start">
+                <FaMapMarkerAlt className="mr-2 text-primary" />
+                <span>Washington DC, MD & Northern VA</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="#services" className="hover:text-primary transition-colors">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#gallery" className="hover:text-primary transition-colors">
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a href="#reviews" className="hover:text-primary transition-colors">
+                  Reviews
+                </a>
+              </li>
+              <li>
+                <a href="#quote" className="hover:text-primary transition-colors">
+                  Request a Quote
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="bg-slate-900 py-4 text-center text-slate-400">
+        <div className="container px-4">
+          <p>&copy; {currentYear} Premium Bathrooms. All rights reserved.</p>
         </div>
       </div>
     </footer>

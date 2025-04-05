@@ -135,8 +135,16 @@ export function QuoteForm() {
                 <input
                   type="tel"
                   id="phone"
-                  {...register('phone', { required: 'Phone number is required' })}
+                  maxLength={10}
+                  {...register('phone', { 
+                    required: 'Phone number is required',
+                    pattern: {
+                      value: /^\d{10}$/,
+                      message: 'Please enter a valid 10-digit phone number'
+                    }
+                  })}
                   className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="1234567890"
                 />
                 {errors.phone && (
                   <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
@@ -183,8 +191,11 @@ export function QuoteForm() {
             </button>
 
             {submitStatus === 'success' && (
-              <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded text-center">
-                Thank you! We'll get back to you shortly.
+              <div className="bg-green-50 border border-green-200 text-green-700 px-8 py-6 rounded-lg text-center max-w-2xl mx-auto my-8">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">Thank You!</h3>
+                <p className="text-lg md:text-xl">
+                  Your quote request has been submitted successfully. We'll get back to you shortly.
+                </p>
               </div>
             )}
 

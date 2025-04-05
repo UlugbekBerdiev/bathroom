@@ -1,4 +1,4 @@
-import { FaPhone, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
+import { FaPhone, FaMapMarkerAlt, FaClock, FaEnvelope, FaTools } from 'react-icons/fa'
 
 export function Contact() {
   return (
@@ -14,33 +14,57 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto text-center">
           <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="bg-primary/10 p-3 rounded-full mb-4">
+            <div className="bg-primary/10 p-3 rounded-full mb-4 flex items-center justify-center">
               <FaPhone className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Phone</h3>
             <a
-              href="tel:+1234567890"
-              className="text-gray-600 hover:text-primary"
+              href="tel:+14435370266"
+              className="text-gray-600 hover:text-primary text-lg"
             >
-              (123) 456-7890
+              (443) 537-0266
             </a>
           </div>
 
           <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="bg-primary/10 p-3 rounded-full mb-4">
+            <div className="bg-primary/10 p-3 rounded-full mb-4 flex items-center justify-center">
+              <FaEnvelope className="w-6 h-6 text-primary" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Email</h3>
+            <a
+              href="mailto:info@bathroomremodeling.com"
+              className="text-gray-600 hover:text-primary text-lg"
+            >
+              info@bathroomremodeling.com
+            </a>
+          </div>
+
+          <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md">
+            <div className="bg-primary/10 p-3 rounded-full mb-4 flex items-center justify-center">
               <FaMapMarkerAlt className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Service Area</h3>
+            <h3 className="text-xl font-semibold mb-2">Location</h3>
             <p className="text-gray-600">
-              Greater Seattle Area<br />
-              Including Bellevue & Kirkland
+              Rockville, MD<br />
+              Montgomery County
             </p>
           </div>
 
-          <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md sm:col-span-2 md:col-span-1">
-            <div className="bg-primary/10 p-3 rounded-full mb-4">
+          <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md">
+            <div className="bg-primary/10 p-3 rounded-full mb-4 flex items-center justify-center">
+              <FaTools className="w-6 h-6 text-primary" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Service Area</h3>
+            <p className="text-gray-600">
+              Washington DC<br />
+              Maryland & Northern VA
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md">
+            <div className="bg-primary/10 p-3 rounded-full mb-4 flex items-center justify-center">
               <FaClock className="w-6 h-6 text-primary" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Business Hours</h3>
