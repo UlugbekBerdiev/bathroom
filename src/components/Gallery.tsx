@@ -1,45 +1,75 @@
 import { useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
-const projects = [
+const photos = [
   {
     id: 1,
     title: 'Modern Master Bath',
-    location: 'Seattle, WA',
-    description: 'Complete renovation with custom shower and freestanding tub',
-    beforeImage: 'https://placehold.co/600x400/1e40af/ffffff?text=Before',
-    afterImage: 'https://placehold.co/600x400/1e293b/ffffff?text=After',
+    location: 'Damascus, MD',
+    image: '/src/assets/bathrooms/photo_14_2025-04-04_23-02-37.jpg',
   },
   {
     id: 2,
     title: 'Luxury Spa Bathroom',
     location: 'Bellevue, WA',
-    description: 'High-end fixtures with marble tile throughout',
-    beforeImage: 'https://placehold.co/600x400/1e40af/ffffff?text=Before',
-    afterImage: 'https://placehold.co/600x400/1e293b/ffffff?text=After',
+    image: '/src/assets/bathrooms/photo_20_2025-04-04_23-02-37.jpg',
   },
   {
     id: 3,
     title: 'Guest Bathroom Update',
     location: 'Kirkland, WA',
-    description: 'Modern vanity and walk-in shower installation',
-    beforeImage: 'https://placehold.co/600x400/1e40af/ffffff?text=Before',
-    afterImage: 'https://placehold.co/600x400/1e293b/ffffff?text=After',
+    image: '/src/assets/bathrooms/photo_30_2025-04-04_23-02-37.jpg',
+  },
+  {
+    id: 4,
+    title: 'Modern Master Bath',
+    location: 'Damascus, MD',
+    image: '/src/assets/bathrooms/photo_15_2025-04-04_23-02-37.jpg',
+  },
+  {
+    id: 5,
+    title: 'Luxury Spa Bathroom',
+    location: 'Bellevue, WA',
+    image: '/src/assets/bathrooms/photo_21_2025-04-04_23-02-37.jpg',
+  },
+  {
+    id: 6,
+    title: 'Guest Bathroom Update',
+    location: 'Kirkland, WA',
+    image: '/src/assets/bathrooms/photo_31_2025-04-04_23-02-37.jpg',
+  },
+  {
+    id: 7,
+    title: 'Modern Master Bath',
+    location: 'Damascus, MD',
+    image: '/src/assets/bathrooms/photo_16_2025-04-04_23-02-37.jpg',
+  },
+  {
+    id: 8,
+    title: 'Luxury Spa Bathroom',
+    location: 'Bellevue, WA',
+    image: '/src/assets/bathrooms/photo_22_2025-04-04_23-02-37.jpg',
+  },
+  {
+    id: 9,
+    title: 'Guest Bathroom Update',
+    location: 'Kirkland, WA',
+    image: '/src/assets/bathrooms/photo_32_2025-04-04_23-02-37.jpg',
   },
 ]
 
 export function Gallery() {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0)
 
-  const nextProject = () => {
-    setActiveIndex((current) => (current === projects.length - 1 ? 0 : current + 1))
+  const nextPhoto = () => {
+    setCurrentIndex((current) => (current === photos.length - 1 ? 0 : current + 1))
   }
 
-  const prevProject = () => {
-    setActiveIndex((current) => (current === 0 ? projects.length - 1 : current - 1))
+  const prevPhoto = () => {
+    setCurrentIndex((current) => (current === 0 ? photos.length - 1 : current - 1))
   }
 
-  const currentProject = projects[activeIndex]
+  const currentPhoto = photos[currentIndex]
 
   return (
     <section id="gallery" className="py-12 md:py-16">
@@ -54,32 +84,28 @@ export function Gallery() {
           </p>
         </div>
 
-        {/* Mobile Carousel View */}
-        <div className="md:hidden relative">
+        <div className="relative max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="relative">
               <div className="aspect-w-16 aspect-h-9">
                 <img
-                  src={currentProject.afterImage}
-                  alt={`${currentProject.title} After`}
+                  src={currentPhoto.image}
+                  alt={`${currentPhoto.title} in ${currentPhoto.location}`}
                   className="object-cover w-full h-full"
                 />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                <h3 className="text-white text-xl font-semibold">{currentProject.title}</h3>
-                <p className="text-white/90">{currentProject.location}</p>
+                <h3 className="text-white text-xl font-semibold">{currentPhoto.title}</h3>
+                <p className="text-white/90">{currentPhoto.location}</p>
               </div>
-            </div>
-            <div className="p-4">
-              <p className="text-gray-600">{currentProject.description}</p>
             </div>
           </div>
           
           <div className="absolute top-1/2 -translate-y-1/2 left-2">
             <button 
-              onClick={prevProject}
+              onClick={prevPhoto}
               className="bg-white/80 hover:bg-white text-primary rounded-full p-2 shadow-md"
-              aria-label="Previous project"
+              aria-label="Previous photo"
             >
               <FaChevronLeft size={20} />
             </button>
@@ -87,48 +113,24 @@ export function Gallery() {
           
           <div className="absolute top-1/2 -translate-y-1/2 right-2">
             <button 
-              onClick={nextProject}
+              onClick={nextPhoto}
               className="bg-white/80 hover:bg-white text-primary rounded-full p-2 shadow-md"
-              aria-label="Next project"
+              aria-label="Next photo"
             >
               <FaChevronRight size={20} />
             </button>
           </div>
-          
+
           <div className="flex justify-center mt-4 space-x-2">
-            {projects.map((_, idx) => (
+            {photos.map((_, idx) => (
               <button 
                 key={idx}
-                onClick={() => setActiveIndex(idx)}
-                className={`w-2.5 h-2.5 rounded-full ${idx === activeIndex ? 'bg-primary' : 'bg-gray-300'}`}
-                aria-label={`Go to project ${idx + 1}`}
+                onClick={() => setCurrentIndex(idx)}
+                className={`w-2.5 h-2.5 rounded-full ${idx === currentIndex ? 'bg-primary' : 'bg-gray-300'}`}
+                aria-label={`Go to photo ${idx + 1}`}
               />
             ))}
           </div>
-        </div>
-
-        {/* Desktop Grid View */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div key={project.id} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="relative">
-                <div className="aspect-w-16 aspect-h-9">
-                  <img
-                    src={project.afterImage}
-                    alt={`${project.title} After`}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                  <h3 className="text-white text-xl font-semibold">{project.title}</h3>
-                  <p className="text-white/90">{project.location}</p>
-                </div>
-              </div>
-              <div className="p-4">
-                <p className="text-gray-600">{project.description}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
