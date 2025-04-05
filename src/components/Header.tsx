@@ -46,8 +46,13 @@ export function Header() {
     >
       <div className="container">
         <nav className="flex items-center justify-between">
-          <div className="text-2xl md:text-3xl font-bold text-primary text-center w-full md:w-auto md:text-left">
-            Premium Bathrooms
+          <div className="flex flex-col items-center md:items-start">
+            <div className="text-2xl md:text-3xl font-bold text-primary text-center md:text-left">
+              <span className="text-primary">Beka</span>
+              <span className="text-slate-800">Remodeling</span>
+              <sup className="text-[10px] text-primary">®</sup>
+            </div>
+            <div className="text-xs text-slate-500 mt-0.5">Since 2008</div>
           </div>
           
           {/* Desktop Menu */}
