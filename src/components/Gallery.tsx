@@ -10,14 +10,14 @@ const photos = [
   },
   {
     id: 2,
-    title: 'Luxury Spa Bathroom',
-    location: 'Bellevue, WA',
+    title: 'Condo master Bathroom',
+    location: 'Timonium, MD',
     image: '/assets/bathrooms/photo_20_2025-04-04_23-02-37.jpg',
   },
   {
     id: 3,
     title: 'Guest Bathroom Update',
-    location: 'Kirkland, WA',
+    location: 'Leesburg, VA',
     image: '/assets/bathrooms/photo_30_2025-04-04_23-02-37.jpg',
   },
   {
@@ -29,14 +29,14 @@ const photos = [
   {
     id: 5,
     title: 'Luxury Spa Bathroom',
-    location: 'Bellevue, WA',
+    location: 'Damascus, MD',
     image: '/assets/bathrooms/photo_21_2025-04-04_23-02-37.jpg',
   },
   {
     id: 6,
     title: 'Guest Bathroom Update',
-    location: 'Kirkland, WA',
-    image: '/assets/bathrooms/photo_31_2025-04-04_23-02-37.jpg',
+    location: 'Gaithersburg, MD',
+    image: '/assets/bathrooms/review5_3.jpg',
   },
   {
     id: 7,
@@ -46,14 +46,14 @@ const photos = [
   },
   {
     id: 8,
-    title: 'Luxury Spa Bathroom',
-    location: 'Bellevue, WA',
-    image: '/assets/bathrooms/photo_22_2025-04-04_23-02-37.jpg',
+    title: 'Guest Bathroom',
+    location: 'Gaithersburg, MD',
+    image: '/assets/bathrooms/photo_3_2025-04-04_23-02-37.jpg',
   },
   {
     id: 9,
-    title: 'Guest Bathroom Update',
-    location: 'Kirkland, WA',
+    title: 'Basement Bathroom Update',
+    location: 'Leesburg, VA',
     image: '/assets/bathrooms/photo_32_2025-04-04_23-02-37.jpg',
   },
 ]
