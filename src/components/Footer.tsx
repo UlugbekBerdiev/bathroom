@@ -43,10 +43,10 @@ export function Footer() {
               <li className="flex items-center justify-center md:justify-start">
                 <FaEnvelope className="mr-2 text-primary" />
                 <a
-                  href="mailto:info@bathroomremodeling.com"
+                  href="mailto:ber.ulugbek@gmail.com"
                   className="hover:text-primary transition-colors"
                 >
-                  info@bathroomremodeling.com
+                  ber.ulugbek@gmail.com
                 </a>
               </li>
               <li className="flex items-center justify-center md:justify-start">

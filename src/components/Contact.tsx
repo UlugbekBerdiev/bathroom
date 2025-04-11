@@ -34,10 +34,10 @@ export function Contact() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Email</h3>
             <a
-              href="mailto:info@bathroomremodeling.com"
+              href="mailto:ber.ulugbek@gmail.com"
               className="text-gray-600 hover:text-primary text-lg"
             >
-              info@bathroomremodeling.com
+              ber.ulugbek@gmail.com
             </a>
           </div>
 
