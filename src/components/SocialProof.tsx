@@ -44,19 +44,16 @@ const recentReviews = [
 ]
 
 export function SocialProof() {
-  const [completedProjects, setCompletedProjects] = useState(0)
-  const [happyCustomers, setHappyCustomers] = useState(0)
-  const [yearsExperience, setYearsExperience] = useState(0)
+  const [completedProjects, setCompletedProjects] = useState(150)
+  const [happyCustomers, setHappyCustomers] = useState(200)
+  const [yearsExperience, setYearsExperience] = useState(5)
 
-  // Simulate counting up animation
+  // Remove the animation interval
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (completedProjects < 150) setCompletedProjects(prev => prev + 1)
-      if (happyCustomers < 200) setHappyCustomers(prev => prev + 1)
-      if (yearsExperience < 5) setYearsExperience(prev => prev + 1)
-    }, 50)
-
-    return () => clearInterval(interval)
+    // Set the final values directly
+    setCompletedProjects(150)
+    setHappyCustomers(200)
+    setYearsExperience(5)
   }, [])
 
   return (
