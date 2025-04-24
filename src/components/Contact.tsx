@@ -47,8 +47,8 @@ export function Contact() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Location</h3>
             <p className="text-gray-600">
-              Rockville, MD<br />
-              Montgomery County
+              Geithersburg, MD<br />
+              Damascus, MD
             </p>
           </div>
 
