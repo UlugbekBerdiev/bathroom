@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
-            <h3 className="text-xl font-semibold mb-4">Beka Solutions</h3>
+            <h3 className="text-xl font-semibold mb-4">Premium Bathrooms</h3>
             <p className="text-slate-300 mb-4">
               Your trusted bathroom remodeling experts serving Washington DC, Maryland,
               and Northern Virginia.
@@ -51,7 +51,7 @@ export function Footer() {
               </li>
               <li className="flex items-center justify-center md:justify-start">
                 <FaMapMarkerAlt className="mr-2 text-primary" />
-                <span>Washington DC, MD & Northern VA</span>
+                <span>Geithersburg, MD 200 Gerard St</span>
               </li>
             </ul>
           </div>
@@ -85,7 +85,7 @@ export function Footer() {
       </div>
       <div className="bg-slate-900 py-4 text-center text-slate-400">
         <div className="container px-4">
-          <p>&copy; {currentYear} Beka Solutions. All rights reserved.</p>
+          <p>&copy; {currentYear} Premium Bathrooms. All rights reserved.</p>
         </div>
       </div>
     </footer>
