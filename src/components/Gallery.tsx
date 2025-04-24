@@ -91,7 +91,7 @@ export function Gallery() {
                 <img
                   src={currentPhoto.image}
                   alt={`${currentPhoto.title} in ${currentPhoto.location}`}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-[500px]"
                 />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
