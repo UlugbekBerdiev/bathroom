@@ -46,8 +46,13 @@ export function Header() {
     >
       <div className="container">
         <nav className="flex items-center justify-between">
-          <div className="text-2xl md:text-3xl font-bold text-primary text-center w-full md:w-auto md:text-left">
-            Premium Bathrooms
+          <div className="text-2xl md:text-3xl font-bold text-primary text-center w-full md:w-auto md:text-left flex items-center gap-2">
+            <img 
+              src="/logoClear.png" 
+              alt="Beka Solutions Logo" 
+              className="h-10 w-auto"
+            />
+            Beka Solutions
           </div>
           
           {/* Desktop Menu */}
