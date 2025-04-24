@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll'
 import { useState, useEffect } from 'react'
-import { FaBars, FaTimes, FaPhone } from 'react-icons/fa'
+import { FaBars, FaTimes, FaPhone, FaInstagram } from 'react-icons/fa'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -74,6 +74,15 @@ export function Header() {
                 aria-label="Call us"
               >
                 <FaPhone size={18} />
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#"
+                className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={18} />
               </a>
             </li>
           </ul>

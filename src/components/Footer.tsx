@@ -21,13 +21,6 @@ export function Footer() {
               >
                 <FaFacebook size={20} />
               </a>
-              <a
-                href="#"
-                className="text-white hover:text-primary transition-colors"
-                aria-label="Instagram"
-              >
-                <FaInstagram size={20} />
-              </a>
             </div>
           </div>
 
