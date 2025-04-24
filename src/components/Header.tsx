@@ -75,7 +75,7 @@ export function Header() {
             <li className="flex items-center gap-2">
               <a 
                 href="tel:+14435370266"
-                className="flex items-center justify-center w-10 h-10 bg-white text-green-500 rounded-full hover:bg-green-50 transition-colors"
+                className="flex items-center justify-center w-10 h-10 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
                 aria-label="Call us"
               >
                 <FaPhone size={18} />
@@ -96,7 +96,7 @@ export function Header() {
           <div className="flex items-center gap-4 md:hidden">
             <a 
               href="tel:+14435370266"
-              className="flex items-center justify-center w-10 h-10 bg-white text-green-500 rounded-full hover:bg-green-50 transition-colors"
+              className="flex items-center justify-center w-10 h-10 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
               aria-label="Call us"
             >
               <FaPhone size={18} />
