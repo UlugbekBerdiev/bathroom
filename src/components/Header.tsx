@@ -51,7 +51,7 @@ export function Header() {
           </div>
           
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden md:flex items-center gap-4">
             {navItems.map((item) => (
               <li key={item.to}>
                 <Link
@@ -67,7 +67,7 @@ export function Header() {
               </li>
             ))}
             
-            <li>
+            <li className="flex items-center gap-2">
               <a 
                 href="tel:+14435370266"
                 className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
@@ -75,10 +75,10 @@ export function Header() {
               >
                 <FaPhone size={18} />
               </a>
-            </li>
-            <li>
               <a 
-                href="#"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
                 aria-label="Instagram"
               >
