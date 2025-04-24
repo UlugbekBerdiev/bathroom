@@ -76,10 +76,10 @@ export function Header() {
                 <FaPhone size={18} />
               </a>
               <a 
-                href="https://instagram.com"
+                href="https://www.instagram.com/bathroom.remodeling"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
+                className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 text-white rounded-full hover:opacity-90 transition-colors"
                 aria-label="Instagram"
               >
                 <FaInstagram size={18} />
