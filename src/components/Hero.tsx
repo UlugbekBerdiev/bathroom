@@ -25,7 +25,7 @@ export function Hero() {
               </div>
               <a 
                 href="tel:+14435370266" 
-                className="flex items-center justify-center gap-3 bg-primary text-white px-5 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                className="flex items-center justify-center gap-3 bg-green-500 text-white px-5 py-3 rounded-lg hover:bg-green-600 transition-colors"
               >
                 <FaPhone className="w-5 h-5 md:w-6 md:h-6" />
                 <span className="font-semibold text-lg md:text-xl">(443) 537-0266</span>
