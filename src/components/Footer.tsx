@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa'
+import { FaFacebook, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
