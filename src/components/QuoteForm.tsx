@@ -98,8 +98,9 @@ export function QuoteForm() {
               <input
                 type="text"
                 id="name"
-                {...register('name', { required: 'Name is required' })}
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Your Name"
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                required
               />
               {errors.name && (
                 <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -113,14 +114,9 @@ export function QuoteForm() {
               <input
                 type="email"
                 id="email"
-                {...register('email', { 
-                  required: 'Email is required',
-                  pattern: {
-                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: 'Invalid email address'
-                  }
-                })}
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Your Email"
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                required
               />
               {errors.email && (
                 <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
@@ -135,16 +131,9 @@ export function QuoteForm() {
                 <input
                   type="tel"
                   id="phone"
-                  maxLength={10}
-                  {...register('phone', { 
-                    required: 'Phone number is required',
-                    pattern: {
-                      value: /^\d{10}$/,
-                      message: 'Please enter a valid 10-digit phone number'
-                    }
-                  })}
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder="1234567890"
+                  placeholder="Your Phone"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                  required
                 />
                 {errors.phone && (
                   <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
@@ -173,10 +162,11 @@ export function QuoteForm() {
               </label>
               <textarea
                 id="description"
-                {...register('description', { required: 'Description is required' })}
+                placeholder="Tell us about your project"
                 rows={4}
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
+                required
+              ></textarea>
               {errors.description && (
                 <p className="text-red-500 text-sm mt-1">{errors.description.message}</p>
               )}

@@ -44,7 +44,7 @@ export function Footer() {
               </li>
               <li className="flex items-center justify-center md:justify-start">
                 <FaMapMarkerAlt className="mr-2 text-primary" />
-                <span>Geithersburg, MD 200 Gerard St</span>
+                <span>Geithersburg, MD 200 Girard St</span>
               </li>
             </ul>
           </div>
