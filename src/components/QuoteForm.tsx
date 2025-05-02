@@ -89,7 +89,7 @@ export function QuoteForm() {
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="space-y-5 bg-white p-6 md:p-8 rounded-lg shadow-md"
+            className="space-y-5 bg-white p-6 md:p-8 rounded-lg shadow-md border-2 border-black"
           >
             <div>
               <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
@@ -99,7 +99,7 @@ export function QuoteForm() {
                 type="text"
                 id="name"
                 placeholder="Your Name"
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                className="w-full px-4 py-3 rounded-lg border-2 border-black focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                 required
               />
               {errors.name && (
@@ -115,7 +115,7 @@ export function QuoteForm() {
                 type="email"
                 id="email"
                 placeholder="Your Email"
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                className="w-full px-4 py-3 rounded-lg border-2 border-black focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                 required
               />
               {errors.email && (
@@ -132,7 +132,7 @@ export function QuoteForm() {
                   type="tel"
                   id="phone"
                   placeholder="Your Phone"
-                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-black focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                   required
                 />
                 {errors.phone && (
@@ -148,7 +148,7 @@ export function QuoteForm() {
                   type="text"
                   id="address"
                   {...register('address', { })}
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-black focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                 />
                 {errors.address && (
                   <p className="text-red-500 text-sm mt-1">{errors.address.message}</p>
@@ -164,7 +164,7 @@ export function QuoteForm() {
                 id="description"
                 placeholder="Tell us about your project"
                 rows={4}
-                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
+                className="w-full px-4 py-3 rounded-lg border-2 border-black focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
                 required
               ></textarea>
               {errors.description && (
