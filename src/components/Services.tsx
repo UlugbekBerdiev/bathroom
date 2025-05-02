@@ -1,4 +1,4 @@
-import { FaBath, FaShower, FaWrench } from 'react-icons/fa'
+import { FaBath, FaShower, FaWrench, FaToilet, FaTint, FaPaintBrush, FaTools } from 'react-icons/fa'
 
 export function Services() {
   return (
@@ -6,51 +6,89 @@ export function Services() {
       <div className="container px-4">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 md:mb-4">
-            Our Services
+            Our Bathroom Remodeling Services
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We offer comprehensive bathroom remodeling services to transform your
-            space into a beautiful and functional area you'll love.
+            Transform your bathroom with our comprehensive remodeling services. From complete renovations 
+            to specific upgrades, we deliver exceptional craftsmanship and attention to detail in every project.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <div className="flex justify-center items-center mb-4">
-              <div className="bg-primary/10 p-3 rounded-full flex items-center justify-center">
-                <FaBath className="w-6 h-6 text-primary" />
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-primary text-4xl mb-4">
+              <FaBath />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Full Bathroom Remodeling</h3>
+            <h3 className="text-xl font-semibold mb-3">Complete Bathroom Remodeling</h3>
             <p className="text-gray-600">
-              Complete bathroom transformations with design services, demolition,
-              installation, and finishing touches.
+              Full-service bathroom renovations including custom shower installations, 
+              bathtub replacements, vanity upgrades, tile work, plumbing updates, 
+              and complete bathroom transformations. We handle everything from demolition 
+              to final touches, ensuring a seamless renovation process.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <div className="flex justify-center items-center mb-4">
-              <div className="bg-primary/10 p-3 rounded-full flex items-center justify-center">
-                <FaShower className="w-6 h-6 text-primary" />
-              </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-primary text-4xl mb-4">
+              <FaShower />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Shower & Tub Conversion</h3>
+            <h3 className="text-xl font-semibold mb-3">Shower & Tub Installation</h3>
             <p className="text-gray-600">
-              Convert your tub to a shower or vice versa, with custom designs and
-              accessibility options available.
+              Expert installation of walk-in showers, custom shower enclosures, 
+              freestanding tubs, and jetted bathtubs. We specialize in waterproofing, 
+              custom tile work, glass shower doors, and modern shower systems with 
+              the latest fixtures and features.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <div className="flex justify-center items-center mb-4">
-              <div className="bg-primary/10 p-3 rounded-full flex items-center justify-center">
-                <FaWrench className="w-6 h-6 text-primary" />
-              </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-primary text-4xl mb-4">
+              <FaToilet />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Bathroom Repairs & Updates</h3>
+            <h3 className="text-xl font-semibold mb-3">Plumbing & Fixtures</h3>
             <p className="text-gray-600">
-              Fixture replacements, tile repair, vanity upgrades, and other smaller
-              updates to refresh your bathroom.
+              Professional plumbing services including toilet installation, sink upgrades, 
+              faucet replacement, and water heater installation. We handle all plumbing 
+              updates, repairs, and ensure proper drainage and water pressure in your 
+              bathroom renovation.
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-primary text-4xl mb-4">
+              <FaTint />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Tile & Flooring</h3>
+            <p className="text-gray-600">
+              Custom tile work for showers, floors, and walls using premium materials. 
+              We offer ceramic, porcelain, natural stone, and glass tile installation 
+              with expert waterproofing and grouting services for lasting durability 
+              and beautiful results.
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-primary text-4xl mb-4">
+              <FaPaintBrush />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Custom Design & Finishing</h3>
+            <p className="text-gray-600">
+              Personalized bathroom design services including custom vanity installation, 
+              lighting upgrades, mirror installation, and decorative finishes. We help 
+              create your dream bathroom with attention to every detail and finish.
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-primary text-4xl mb-4">
+              <FaTools />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Repair & Maintenance</h3>
+            <p className="text-gray-600">
+              Comprehensive repair services for leaks, water damage, mold issues, 
+              and general maintenance. We provide emergency repairs, preventive 
+              maintenance, and solutions for common bathroom problems to keep your 
+              space in perfect condition.
             </p>
           </div>
         </div>

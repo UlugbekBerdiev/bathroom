@@ -83,7 +83,10 @@ export function QuoteForm() {
             </h2>
             <p className="text-gray-600">
               Fill out the form below and we'll get back to you within 24 hours
-              with a free, no-obligation quote for your bathroom remodel.
+              with a free, no-obligation quote for your bathroom renovation, remodel, or makeover. 
+              We specialize in complete bathroom transformations, shower installations, 
+              bathtub replacements, vanity upgrades, tile work, plumbing updates, 
+              and custom bathroom designs in Washington DC, Maryland, and Northern Virginia.
             </p>
           </div>
 
