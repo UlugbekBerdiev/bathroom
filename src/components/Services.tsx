@@ -43,7 +43,11 @@ export function Services() {
             </div>
             <h3 className="text-xl font-semibold mb-2">New Bathroom Construction</h3>
             <p className="text-gray-600">
-              Expert new bathroom installations including:
+              Complete bathroom builds from scratch including:
+              • Basement bathroom installations
+              • New room bathroom construction
+              • Plumbing and drainage system setup
+              • Electrical and lighting infrastructure
               • Custom shower bases and waterproofing
               • Sliding glass shower doors
               • Custom shower niches and shelves
@@ -52,6 +56,7 @@ export function Services() {
               • Custom cabinetry and storage solutions
               • Premium faucet and fixture installation
               • Ventilation and moisture control systems
+              • Building code compliance and permits
             </p>
           </div>
 
@@ -63,7 +68,13 @@ export function Services() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Bathroom Additions & Upgrades</h3>
             <p className="text-gray-600">
-              Specialized bathroom enhancements featuring:
+              Transform your existing bathroom with:
+              • Half to full bathroom conversions
+              • Bathroom space extensions
+              • Wall removal and relocation
+              • Closet-to-bathroom conversions
+              • Door relocation and reconfiguration
+              • Shower and toilet repositioning
               • Custom tile patterns and designs
               • Glass mosaic accent walls
               • Custom shower door installations
