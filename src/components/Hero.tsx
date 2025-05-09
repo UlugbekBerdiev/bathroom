@@ -1,30 +1,6 @@
 import { Link } from 'react-scroll'
 import { FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
 
-const recentProjects = [
-  {
-    id: 1,
-    title: 'Modern Master Bath',
-    location: 'Damascus, MD',
-    image: '/assets/bathrooms/photo_14_2025-04-04_23-02-37.jpg',
-    date: '2 days ago'
-  },
-  {
-    id: 2,
-    title: 'Condo Bathroom',
-    location: 'Timonium, MD',
-    image: '/assets/bathrooms/photo_20_2025-04-04_23-02-37.jpg',
-    date: '1 week ago'
-  },
-  {
-    id: 3,
-    title: 'Guest Bath Update',
-    location: 'Leesburg, VA',
-    image: '/assets/bathrooms/photo_30_2025-04-04_23-02-37.jpg',
-    date: '2 weeks ago'
-  }
-]
-
 export function Hero() {
   return (
     <section 
@@ -40,9 +16,9 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/20 -z-10"></div>
       
       <div className="container relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Content - Main Text and Buttons */}
-          <div className="lg:col-span-2 text-center lg:text-left">
+        <div className="max-w-3xl mx-auto">
+          {/* Main Content */}
+          <div className="text-center">
             <div className="bg-white/70 backdrop-blur-sm py-6 px-4 rounded-lg mb-6">
               <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:justify-between">
                 <div className="flex items-center justify-center gap-3 text-gray-800 text-center">
@@ -59,7 +35,7 @@ export function Hero() {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="quote"
                 spy={true}
@@ -80,27 +56,6 @@ export function Hero() {
               >
                 View Our Work
               </Link>
-            </div>
-          </div>
-
-          {/* Right Content - Recent Projects */}
-          <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-primary mb-4">Recent Projects</h3>
-            <div className="space-y-4">
-              {recentProjects.map((project) => (
-                <div key={project.id} className="flex items-center gap-4 p-4 hover:bg-white/50 rounded-lg transition-colors">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-20 h-20 object-cover rounded-lg"
-                  />
-                  <div>
-                    <h4 className="font-semibold text-gray-800">{project.title}</h4>
-                    <p className="text-gray-600 text-sm">{project.location}</p>
-                    <p className="text-gray-500 text-xs">{project.date}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
