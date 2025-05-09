@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll'
-import { FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaPhone, FaMapMarkerAlt, FaTrophy, FaAward, FaMedal } from 'react-icons/fa'
 
 export function Hero() {
   return (
@@ -16,9 +16,9 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/20 -z-10"></div>
       
       <div className="container relative z-10">
-        <div className="max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Main Content */}
-          <div className="text-center">
+          <div className="text-center lg:text-left">
             <div className="bg-white/70 backdrop-blur-sm py-6 px-4 rounded-lg mb-6">
               <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:justify-between">
                 <div className="flex items-center justify-center gap-3 text-gray-800 text-center">
@@ -35,7 +35,7 @@ export function Hero() {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 to="quote"
                 spy={true}
@@ -56,6 +56,45 @@ export function Hero() {
               >
                 View Our Work
               </Link>
+            </div>
+          </div>
+
+          {/* Awards Section */}
+          <div className="space-y-4">
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg transform hover:scale-105 transition-transform">
+              <div className="flex items-center gap-4">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <FaTrophy className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-primary">Best Company 2023</h3>
+                  <p className="text-gray-600">Recognized for Excellence in Service</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg transform hover:scale-105 transition-transform">
+              <div className="flex items-center gap-4">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <FaAward className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-primary">1st Place Quality</h3>
+                  <p className="text-gray-600">Highest Rated Bathroom Remodeler</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-lg transform hover:scale-105 transition-transform">
+              <div className="flex items-center gap-4">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <FaMedal className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-primary">Customer Choice 2023</h3>
+                  <p className="text-gray-600">Most Trusted by Homeowners</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
