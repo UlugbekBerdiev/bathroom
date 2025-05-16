@@ -102,6 +102,7 @@ export function QuoteForm() {
                 type="text"
                 id="name"
                 placeholder="Your Name"
+                {...register('name', { })}
                 className="w-full px-4 py-3 rounded-lg border-2 border-black focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                 required
               />
@@ -118,6 +119,7 @@ export function QuoteForm() {
                 type="email"
                 id="email"
                 placeholder="Your Email"
+                {...register('email', { })}
                 className="w-full px-4 py-3 rounded-lg border-2 border-black focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                 required
               />
@@ -167,6 +169,7 @@ export function QuoteForm() {
               <textarea
                 id="description"
                 placeholder="Tell us about your project"
+                {...register('description', { })}
                 rows={4}
                 className="w-full px-4 py-3 rounded-lg border-2 border-black focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
                 required
